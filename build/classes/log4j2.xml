@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE xml>  
+<Configuration status="off" monitorInterval="3600">  
+  
+    <properties>  
+        <property name="LOG_HOME">/data/tspacelog</property>  
+        <property name="FILE_NAME">daily-log</property>  
+    </properties>
+      
+    <Appenders>  
+        <Console name="Console" target="SYSTEM_OUT">
+        	<!-- 控制台输出error及以上信息 -->  
+        	<ThresholdFilter level="error" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} %F %L %M - %msg%xEx%n" />  
+        </Console>  
+  
+        <RollingRandomAccessFile name="daily-log-error"  
+            fileName="${LOG_HOME}/${FILE_NAME}-error.log" 
+            filePattern="${LOG_HOME}/$${date:yyyy-MM}/${FILE_NAME}-%d{yyyy-MM-dd}-error-%i.log.gz">  
+            <PatternLayout  
+                pattern="%date{yyyy-MM-dd HH:mm:ss.SSS} %level [%thread][%file-%method:%line] - %msg%n" />  
+            <Policies>  
+                <TimeBasedTriggeringPolicy interval="1" />  
+                <SizeBasedTriggeringPolicy size="10 MB" />  
+            </Policies>  
+            <DefaultRolloverStrategy max="1000" />  
+            <ThresholdFilter level="fatal" onMatch="DENY" onMismatch="NEUTRAL"/>
+            <ThresholdFilter level="error" onMatch="ACCEPT" onMismatch="DENY"/> 
+        </RollingRandomAccessFile> 
+        <RollingRandomAccessFile name="daily-log-fatal"
+        	fileName="${LOG_HOME}/${FILE_NAME}-fatal.log"
+        	filePattern="{LOG_HOME}/$${date:yyyy-MM}/${FILE_NAME}-%d{yyyy-MM-dd}-fatal-%i.log.gz">
+        	<PatternLayout
+        		pattern="%date{yyyy-MM-dd HH:mm:ss.SSS} %level [%thread][%file-%method:%line] - %msg%n" />
+        	<Policies>
+        		<TimeBasedTriggeringPolicy interval="1" />
+        		<SizeBasedTriggeringPolicy size="10 MB" />
+        	</Policies> 
+        	<DefaultRolloverStrategy max="1000" />
+        	<ThresholdFilter level="fatal" onMatch="ACCEPT" onMismatch="DENY"/>
+        </RollingRandomAccessFile>
+        
+    </Appenders>  
+      
+    <Loggers>  
+        <!-- <Logger name="com.shbc.batch" additivity="false">  
+            <AppenderRef ref="running-log" />  
+            <AppenderRef ref="Console" />  
+        </Logger>   -->
+        <Root level="error">  
+            <AppenderRef ref="Console" />  
+            <AppenderRef ref="daily-log-error" />
+            <AppenderRef ref="daily-log-fatal" />
+        </Root> 
+        <!-- <Logger name="com.tspace.database" level="trace" additivity="false">
+        	<Appender-ref ref="Console"/>
+        	<Appender-ref ref="daily-log-error"/>
+        	<Appender-ref ref="daily-log-fatal"/>
+        </Logger>
+        <Logger name="com.tspace.servlet" level="trace" additivity="false">
+        	<Appender-ref ref="Console"/>
+        	<Appender-ref ref="daily-log-error"/>
+        	<Appender-ref ref="daily-log-fatal"/>
+        </Logger>
+        <Logger name="com.tspace.listener" level="trace" additivity="false">
+        	<Appender-ref ref="Console"/>
+        	<Appender-ref ref="daily-log-error"/>
+        	<Appender-ref ref="daily-log-fatal"/>
+        </Logger> -->
+    </Loggers>  
+</Configuration>  

@@ -1,0 +1,24 @@
+.divclass {
+	background: url(images/indexbg.png);
+	width: 35%;
+	padding: 2%;
+	margin-left: 10%;
+	margin-top: 5%;
+	/* border: 1px solid #e0e0e0; */
+	float: left;
+	box-sizing: border-size;
+}
+
+.imageclass {
+	width: 30%;
+	float: left;
+}
+
+.hclass {
+	color: #ffffff;
+}
+
+.pclass {
+	margin-top: 10%;
+	color: #ffffff;
+}

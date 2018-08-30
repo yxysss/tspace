@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>TSpace</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <!-- adminloginfilter-start -->
+  <filter>
+    <filter-name>adminloginfilter</filter-name>
+    <filter-class>com.tspace.filter.AdminFilter</filter-class>
+    <init-param>
+      <param-name>allowUrl</param-name>
+      <param-value>
+      	/Administrator/adminlogin.jsp;
+      </param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>adminloginfilter</filter-name>
+    <url-pattern>/Administrator/*</url-pattern>
+  </filter-mapping>
+  <!-- adminloginfilter-end -->
+  <!-- loginfilter-start -->
+  <filter>
+    <filter-name>loginfilter</filter-name>
+    <filter-class>com.tspace.filter.LoginFilter</filter-class>
+    <init-param>
+      <param-name>stopUrl</param-name>
+      <param-value>
+      	/User-mobile/applysuccess.jsp;/User-mobile/changepassword.jsp;
+      </param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>loginfilter</filter-name>
+    <url-pattern>/User-mobile/*</url-pattern>
+  </filter-mapping>
+  <!-- loginfilter-end -->
+  <!-- TimerListener-start -->
+  <listener>
+    <listener-class>com.tspace.listener.TimerListener</listener-class>
+  </listener>
+  <!-- TimerListener-end -->
+</web-app>

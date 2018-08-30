@@ -1,0 +1,24 @@
+.codeclass {
+	display: inline-block;
+}
+
+.code, .inputpin, .pin {
+	display: inline;
+}
+
+.codebtn {
+	display: inline;
+	float: left;
+}
+
+.notice {
+	color: red;
+}
+
+.pwnotice {
+	color: blue;
+}
+
+.nextstep {
+	display:block;
+}

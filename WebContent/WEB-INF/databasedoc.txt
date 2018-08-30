@@ -1,0 +1,115 @@
+DATABASE TSPACE
+
+SQL：
+CREATE DATABASE TSPACE
+
+TABLE USER
+iduser				INT(11)			PRIMARY KEY NOT NULL UNIQUE AUTO_INCREMENT
+studentid			VARCHAR(45)		NOT NULL UNIQUE
+mobile				CHAR(11)		NOT NULL UNIQUE
+identification		CHAR(18)		NOT NULL UNIQUE
+name				VARCHAR(45) 	NOT NULL
+password			CHAR(32)		NOT NULL
+lastlogin			DATETIME		NOT NULL
+school				VARCHAR(45)		NOT NULL
+
+SQL：
+CREATE TABLE USER (
+  iduser INT(11) NOT NULL AUTO_INCREMENT,
+  studentid VARCHAR(45) NOT NULL,
+  mobile CHAR(11) NOT NULL,
+  identification CHAR(18) NOT NULL,
+  name VARCHAR(45) NOT NULL,
+  password CHAR(32) NOT NULL,
+  lastlogin DATETIME NOT NULL,
+  school VARCHAR(45) NOT NULL,
+  PRIMARY KEY (iduser),
+  UNIQUE (iduser),
+  UNIQUE (studentid),
+  UNIQUE (mobile),
+  UNIQUE (identification));
+
+TABLE ROOM
+idroom				INT(11)   		PRIMARY KEY NOT NULL UNIQUE AUTO_INCREMENT
+nameroom			VARCHAR(45)		NOT NULL UNIQUE
+addressroom			VARCHAR(100)	NOT NULL UNIQUE
+capacityroom		INT(11)			NOT NULL
+typeroom			VARCHAR(45)		NOT NULL
+descriptionroom		VARCHAR(500) 	NOT NULL
+pictureroom			VARCHAR(100)	NOT NULL
+availableroom		CHAR(210)		NOT NULL
+todayroom			CHAR(30)		NOT NULL
+todaydate			DATE			NOT NULL
+
+SQL：
+CREATE TABLE ROOM (
+	idroom INT(11) NOT NULL AUTO_INCREMENT,
+	nameroom VARCHAR(45) NOT NULL,
+	addressroom VARCHAR(100) NOT NULL,
+	capacityroom INT(11) NOT NULL,
+	typeroom VARCHAR(45) NOT NULL,
+	description VARCHAR(500) NOT NULL,
+	pictureroom VARCHAR(100) NOT NULL,
+	availableroom CHAR(210) NOT NULL,
+	todayroom CHAR(30) NOT NULL,
+	todaydate DATE NOT NULL,
+	PRIMARY KEY (idroom),
+	UNIQUE (idroom),
+	UNIQUE (nameroom),
+	UNIQUE (addressroom));
+
+TABLE APPLICATION
+idapplication 		INT(11)			PRIMARY KEY NOT NULL UNIQUE AUTO_INCREMENT
+idroom				INT(11)			NOT NULL
+starttime			DATETIME 		NOT NULL
+endtime 			DATETIME		NOT NULL
+applicant			VARCHAR(45)		NOT NULL
+reason 				VARCHAR(60)		NOT NULL
+participants		VARCHAR(60) 	NOT NULL
+state				VARCHAR(10)		NOT NULL
+applytime			DATETIME		NOT NULL
+audittime			DATETIME
+password			CHAR(32)
+
+SQL：
+CREATE TABLE APPLICATION (
+	idapplication INT(11) NOT NULL AUTO_INCREMENT,
+	idroom INT(11) NOT NULL,
+	starttime DATETIME NOT NULL,
+	endtime DATETIME NOT NULL,
+	applicant VARCHAR(45) NOT NULL,
+	reason VARCHAR(60) NOT NULL,
+	participants VARCHAR(60) NOT NULL,
+	state VARCHAR(10) NOT NULL,
+	applytime DATETIME NOT NULL,
+	audittime DATETIME,
+	password CHAR(32),
+	PRIMARY KEY (idapplication),
+	UNIQUE (idapplication));
+
+TABLE ADMIN
+idadmin 			INT(11)			PRIMARY KEY NOT NULL UNIQUE AUTO_INCREMENT
+adminname			VARCHAR(45)		NOT NULL UNIQUE
+password			CHAR(32)		NOT NULL
+lastlogin			DATE			
+
+SQL：
+CREATE TABLE ADMIN (
+	idadmin INT(11) NOT NULL AUTO_INCREMENT,
+	adminname VARCHAR(45) NOT NULL,
+	password CHAR(32) NOT NULL,
+	PRIMARY KEY (idadmin),
+	UNIQUE (idadmin),
+	UNIQUE (adminname));
+
+TABLE SCHOOL
+idschool 			INT(11)			PRIMARY KEY NOT NULL UNIQUE AUTO_INCREMENT
+schoolname			VARCHAR(45)		NOT NULL UNIQUE
+
+SQL：
+CREATE TABLE ADMIN (
+	idschool INT(11) NOT NULL AUTO_INCREMENT,
+	schoolname VARCHAR(45) NOT NULL,
+	PRIMARY KEY (idschool),
+	UNIQUE (idschool),
+	UNIQUE (schoolname));

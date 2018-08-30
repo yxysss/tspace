@@ -1,0 +1,44 @@
+
+.carouselimage {
+	width: 100%;
+	height: 100%;
+	
+}
+
+.classifygroup {
+	width: 100%;
+}
+
+.indexbutton {
+	width: 100%;
+	float: left;
+	box-sizing: border-size;
+	border-width: 0px !important;
+	text-align: center;
+	font-size: 1em;
+	line-height:3em;
+	border-radius: 0 !important;
+	box-shadow: 0 0 0 !important;
+}
+
+.divclass {
+	background: #ffffff;
+	box-sizing: border-size;
+	padding: 1%;
+	margin: 1%;
+	width: 48%;
+	height: auto;
+	float: left;
+}
+
+.imgclass {
+	width: 100%;
+}
+
+.textclass {
+	color: #000000;
+}
+
+.listview {
+	padding: 5%;
+}

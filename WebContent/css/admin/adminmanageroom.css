@@ -1,0 +1,35 @@
+html body {
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+}
+
+.roommanage {
+	width:80%;
+	float: left;
+	height: auto;
+	min-width: 885px;
+	margin-left: 10%;
+	
+}
+
+.displaymatrix {
+	border: 1px solid #e0e0e0;
+	box-sizing: border-size;
+	width: 27%;
+	height: auto;
+	float: left;
+	padding: 1%;
+	margin-top:1%;
+	margin-left:1%;
+}
+
+.imgclass {
+	width: 100%;
+	height: auto;
+}
+
+.textclass {
+	margin-top: 2%;
+	display: block;
+}

@@ -1,0 +1,30 @@
+html,body{
+	text-align:center;
+	margin:0px;
+	padding:0px;
+}
+.navclass ul li{
+	float:right;
+}
+.navclass{
+	border-bottom:1px solid #F0F0F0;
+	background:#F0F0F0;
+	width:100%;
+	height:auto;
+	margin:0px;
+	padding-left:200px;
+	padding-right:400px;
+	padding-bottpm:10px;
+	top:0px;	
+}
+.aclass{
+	color:#000000;
+	background: ;
+	font-size:10px;
+}
+.navclass ul li a:visited, .navclass ul li a{
+	color:#000000;
+}
+.navclass ul li a:hover, .navclass ul li a:active{
+	color:#ff8000;
+}

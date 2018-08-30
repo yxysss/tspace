@@ -1,0 +1,42 @@
+@CHARSET "UTF-8";
+
+html,body {
+	vertical-align: middle;
+}
+
+.adminid,.password,.inputpin {
+	width: 330px;
+	height: 42px;
+	line-height: 42px;
+	margin-top: -5px;
+	padding: 0 15px;
+	background: rgba(45, 45, 45, .15);
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+}
+
+.h3class {
+	margin-bottom: 30px;
+}
+
+#login {
+	width: 330px;
+}
+
+.topblank {
+	width: 100%;
+	height: 150px;
+}
+
+form {
+	width: auto;
+	text-align: center;
+	border: 1px solid #000000;
+	margin: 0 auto 0 auto;
+	padding: 3%;
+	float: right;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+}

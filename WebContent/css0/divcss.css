@@ -1,0 +1,52 @@
+.divclass{
+	border:1px solid #c0c0c0;
+	width:30%;
+	height:auto;
+	margin-top:1%;
+	margin-left:1%;
+	float:left;
+	text-align:left;
+}
+.imgclass{
+	padding:2px;
+	width:100%;
+	height:100%;
+}
+.textclass{
+	margin:2px;
+}
+.container{
+	width:80%;
+}
+html,body{
+	text-align:center;
+	margin:0px;
+	padding:0px;
+}
+.navclass{
+	border-bottom:1px solid #F0F0F0;
+	background:#F0F0F0;
+	width:100%;
+	height:auto;
+	margin:0px;
+	padding-left:200px;
+	padding-right:400px;
+	padding-bottpm:10px;
+	top:0px;
+}
+.aclass{
+	color:#000000;
+	font-size:10px;
+}
+.navclass ul li a:visited, .navclass ul li a{
+	color:#000000;
+}
+.navclass ul li a:hover, .navclass ul li a:active{
+	color:#ff8000;
+}
+.navclass ul li #checklogin0, .navclass ul li #checklogin0:active, .navclass ul li #checklogin0:hover, .navclass ul li #checklogin0:visited{
+	color:#ff5000;
+}
+#myapplynav, #contactnav{
+	float:right;
+}

@@ -1,0 +1,9 @@
+@CHARSET "UTF-8";
+
+	.ui-content {
+		margin:0 !important;
+		padding:0 !important;
+	}
+	.pop {
+		padding: 1em !important;
+	}

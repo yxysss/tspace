@@ -1,0 +1,66 @@
+html,body {
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+}
+
+ul {
+	list-style: none;
+	min-width: 450px;
+	display: block;
+	float: left;
+}
+
+li {
+	text-decoration: none;
+	display: block;
+	float: left;
+}
+
+.navclass {
+	border-bottom: 1px solid #000000;
+	background: url(images/bg.jpg) repeat-x;
+	width: 100%;
+	min-width: 1000px;
+	height:75px;
+	margin:0px;
+	margin-top: 1px;
+	padding-left: 10%;
+	padding-bottpm: 10px;
+	top: 0px;	
+}
+
+.aclass {
+	margin-top: 21px;
+	float: left;
+	display: block;
+	line-height: 33px;
+	font-size: 14px;
+	padding-left: 15px;
+	margin-right: 10px;	
+	text-decoration:none;
+	color: #FFFFFF;
+	background: url(images/out.png) no-repeat;
+}
+
+.spanclass {
+	display: block;
+	line-height: 33px;
+	padding-right: 15px;
+	color: #FFFFFF;
+	text-decoration:none;
+	background: url(images/out.png) no-repeat right center;
+}
+
+.aclass:hover, .aclass:active, .aclass:visited, .aclass:hover .spanclass, .aclass:hover .spanclass, .aclass:visited .spanclass{
+	background-image: url(images/in.png);
+	text-decoration:none;
+	color: #FFFFFF;
+}
+
+.logoclass {
+	float: left;
+	height: 75px;
+	margin-right: 3%;
+}
+

@@ -1,0 +1,47 @@
+tr,td {
+	border: 1px solid #000000;
+	text-aligh: center;
+}
+
+table {
+	width: 60%;
+	height:auto;
+	align: center;
+	margin: 0 auto;
+}
+
+.roomtable {
+	border: 1px solid #F0F0F0;
+	width: auto;
+	height: auto;
+}
+
+.applyroom {
+	text-align: center;
+	border: 1px solid #F0F0F0;
+}
+
+.applyinput {
+	margin: 0 auto;
+	width: 60%;
+	height: auto;
+}
+
+textarea {
+	resize: none;
+}
+
+.roomdescription {
+	border: 1px solid #f0f0f0;
+	width: 60%;
+	height: auto;
+	margin: 0 auto;
+}
+
+.description {
+	float: right;
+}
+
+.pictureroom {
+	
+}

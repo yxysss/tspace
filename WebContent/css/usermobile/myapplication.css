@@ -1,0 +1,31 @@
+.acceptclass {
+	color: #00ff00;
+}
+
+.declineclass {
+	color: #ff0000;
+}
+
+.unsettleclass {
+	color: #e7ab10;
+}
+
+.cancelclass {
+	color: #c0c0c0;
+}
+
+.imageclass {
+	margin-top: 2em;
+	margin-left: 0.2em;
+}
+
+.detailhead {
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	text-align: center;
+	background: #ff8000;
+}
+
+.detailfont {
+	font-size: 1em;
+}
